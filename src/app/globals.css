@@ -18,12 +18,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(15, 84, 19);
+  background: radial-gradient(circle, rgba(15, 84, 19, 1) 0%, rgba(32, 10, 45, 1) 48%, rgba(3, 12, 38, 1) 100%);
+}
+
+.card-layout {
+  background: rgb(196, 209, 196);
+  background: radial-gradient(circle, rgb(226 74 201 / 81%) 0%, rgb(75 64 81 / 54%) 48%);
 }
 
 @layer utilities {
