@@ -21,7 +21,7 @@ export default function CaptionDisplay({ captions, onEdit, onDelete, currentTime
         {captions.map((caption, index) => (
           <li
             key={index}
-            className={`p-4 bg-gray-100 rounded ${
+            className={`p-4 bg-gray-100 text-black rounded ${
               currentTime >= parseFloat(caption.startTime) && currentTime <= parseFloat(caption.endTime)
                 ? 'bg-blue-100'
                 : ''
