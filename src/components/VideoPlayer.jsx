@@ -24,19 +24,19 @@ export default function VideoPlayer({ url, captions, currentTime, onTimeUpdate }
     }
   }, [onTimeUpdate])
 
-  useEffect(() => {
-    const handleKeyPress = (e) => {
-      if (e.code === 'Space' && videoRef.current) {
-        e.preventDefault()
-        videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause()
-      }
-    }
+  // useEffect(() => {
+  //   const handleKeyPress = (e) => {
+  //     if (e.code === 'Space' && videoRef.current) {
+  //       e.preventDefault()
+  //       videoRef.current.paused ? videoRef.current.play() : videoRef.current.pause()
+  //     }
+  //   }
 
-    document.addEventListener('keydown', handleKeyPress)
-    return () => {
-      document.removeEventListener('keydown', handleKeyPress)
-    }
-  }, [])
+  //   document.addEventListener('keydown', handleKeyPress)
+  //   return () => {
+  //     document.removeEventListener('keydown', handleKeyPress)
+  //   }
+  // }, [])
 
   const currentCaption = captions.find(
     caption => currentTime >= parseFloat(caption.startTime) && currentTime <= parseFloat(caption.endTime)
